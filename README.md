@@ -2,6 +2,26 @@
 
 Challenges from [Reverse engineering for benginner](https://challenges.re/#By%20level)
 
+### 1.5 Hello, world!
+
+* [challenge48](https://github.com/ariesduanmu/re4b/blob/master/c_48.md)
+* [challenge49](https://github.com/ariesduanmu/re4b/blob/master/c_49.md)
+
+### 1.7 Stack
+
+* [challenge51](https://github.com/ariesduanmu/re4b/blob/master/c_51.md)
+* [challenge52](https://github.com/ariesduanmu/re4b/blob/master/c_52.md)
+
+### 1.9 scanf()
+
+* [challenge53](https://github.com/ariesduanmu/re4b/blob/master/c_53.md)
+
+### 1.16 Loops
+
+* [challenge55](https://github.com/ariesduanmu/re4b/blob/master/c_55.md)
+* [challenge56](https://github.com/ariesduanmu/re4b/blob/master/c_56.md)
+* [challenge57](https://github.com/ariesduanmu/re4b/blob/master/c_57.md)
+
 
 ### 1.18 Replacing arthmetic instructions to other ones
 
