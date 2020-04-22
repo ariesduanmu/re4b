@@ -39,3 +39,7 @@ Challenges from [Reverse engineering for benginner](https://challenges.re/#By%20
 * [challenge64](https://github.com/ariesduanmu/re4b/blob/master/c_64.md)
 * [challenge65](https://github.com/ariesduanmu/re4b/blob/master/c_65.md)
 * [challenge66](https://github.com/ariesduanmu/re4b/blob/master/c_66.md)
+
+### 1.22 Manipulating specific bit(s)
+
+* [challenge67](https://github.com/ariesduanmu/re4b/blob/master/c_67.md)
