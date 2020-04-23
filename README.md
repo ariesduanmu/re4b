@@ -46,3 +46,7 @@ Challenges from [Reverse engineering for benginner](https://challenges.re/#By%20
 * [challenge68](https://github.com/ariesduanmu/re4b/blob/master/c_68.md)
 * [challenge69](https://github.com/ariesduanmu/re4b/blob/master/c_69.md)
 * [challenge70](https://github.com/ariesduanmu/re4b/blob/master/c_70.md)
+
+### 1.23  Structures
+
+* [challenge71](https://github.com/ariesduanmu/re4b/blob/master/c_71.md)
