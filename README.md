@@ -51,3 +51,8 @@ Challenges from [Reverse engineering for benginner](https://challenges.re/#By%20
 
 * [challenge71](https://github.com/ariesduanmu/re4b/blob/master/c_71.md)
 * [challenge72](https://github.com/ariesduanmu/re4b/blob/master/c_72.md)
+
+
+### 3.9 Division using multiplication
+
+* [challenge27](https://github.com/ariesduanmu/re4b/blob/master/c_27.md)
