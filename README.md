@@ -56,3 +56,7 @@ Challenges from [Reverse engineering for benginner](https://challenges.re/#By%20
 ### 3.9 Division using multiplication
 
 * [challenge27](https://github.com/ariesduanmu/re4b/blob/master/c_27.md)
+
+### 3.17 Obfuscation
+
+* [challenge29](https://github.com/ariesduanmu/re4b/blob/master/c_29.md)
