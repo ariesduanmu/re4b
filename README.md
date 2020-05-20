@@ -60,3 +60,7 @@ Challenges from [Reverse engineering for benginner](https://challenges.re/#By%20
 ### 3.17 Obfuscation
 
 * [challenge29](https://github.com/ariesduanmu/re4b/blob/master/c_29.md)
+
+### others
+
+* [challenge2](https://github.com/ariesduanmu/re4b/blob/master/c_2.md)
