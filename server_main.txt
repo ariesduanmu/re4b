@@ -1,0 +1,141 @@
+[0x000012b9]> pdf
+┌ 398: int main (int32_t arg_4h);
+│           ; var int32_t var_3ch @ ebp-0x3c
+│           ; var int32_t var_38h @ ebp-0x38
+│           ; var struct sockaddr*address @ ebp-0x28
+│           ; var int32_t var_26h @ ebp-0x26
+│           ; var int32_t var_24h @ ebp-0x24
+│           ; var int32_t var_18h @ ebp-0x18
+│           ; var void *var_14h @ ebp-0x14
+│           ; var void *var_10h @ ebp-0x10
+│           ; var uint32_t socket @ ebp-0xc
+│           ; var int32_t var_8h @ ebp-0x8
+│           ; arg int32_t arg_4h @ esp+0x64
+│           0x000012b9      8d4c2404       lea ecx, dword [arg_4h]
+│           0x000012bd      83e4f0         and esp, 0xfffffff0
+│           0x000012c0      ff71fc         push dword [ecx - 4]
+│           0x000012c3      55             push ebp
+│           0x000012c4      89e5           mov ebp, esp
+│           0x000012c6      53             push ebx
+│           0x000012c7      51             push ecx
+│           0x000012c8      83ec40         sub esp, 0x40
+│           0x000012cb      e8f0feffff     call sym.__x86.get_pc_thunk.bx
+│           0x000012d0      81c3302d0000   add ebx, 0x2d30
+│           0x000012d6      83ec04         sub esp, 4
+│           0x000012d9      6a00           push 0                      ; int protocol
+│           0x000012db      6a01           push 1                      ; int type
+│           0x000012dd      6a02           push 2                      ; int domain
+│           0x000012df      e82cfeffff     call sym.imp.socket         ; int socket(int domain, int type, int protocol)
+│           0x000012e4      83c410         add esp, 0x10
+│           0x000012e7      8945f4         mov dword [socket], eax
+│           0x000012ea      837df4ff       cmp dword [socket], -1
+│       ┌─< 0x000012ee      7512           jne 0x1302
+│       │   0x000012f0      83ec0c         sub esp, 0xc
+│       │   0x000012f3      8d8308e0ffff   lea eax, dword [ebx - 0x1ff8]
+│       │   0x000012f9      50             push eax                    ; const char *format
+│       │   0x000012fa      e831fdffff     call sym.imp.printf         ; int printf(const char *format)
+│       │   0x000012ff      83c410         add esp, 0x10
+│       │   ; CODE XREF from main @ 0x12ee
+│       └─> 0x00001302      83ec0c         sub esp, 0xc
+│           0x00001305      8d8319e0ffff   lea eax, dword [ebx - 0x1fe7]
+│           0x0000130b      50             push eax                    ; const char *s
+│           0x0000130c      e88ffdffff     call sym.imp.puts           ; int puts(const char *s)
+│           0x00001311      83c410         add esp, 0x10
+│           0x00001314      66c745d80200   mov word [address], 2
+│           0x0000131a      c745dc000000.  mov dword [var_24h], 0
+│           0x00001321      83ec0c         sub esp, 0xc
+│           0x00001324      685c110000     push 0x115c
+│           0x00001329      e822fdffff     call sym.imp.htons
+│           0x0000132e      83c410         add esp, 0x10
+│           0x00001331      668945da       mov word [var_26h], ax
+│           0x00001335      83ec04         sub esp, 4
+│           0x00001338      6a10           push 0x10                   ; socklen_t address_len
+│           0x0000133a      8d45d8         lea eax, dword [address]
+│           0x0000133d      50             push eax                    ; struct sockaddr*address
+│           0x0000133e      ff75f4         push dword [socket]         ; int socket
+│           0x00001341      e88afdffff     call sym.imp.bind           ; int bind(int socket, struct sockaddr*address, socklen_t address_len)
+│           0x00001346      83c410         add esp, 0x10
+│           0x00001349      85c0           test eax, eax
+│       ┌─< 0x0000134b      791c           jns 0x1369
+│       │   0x0000134d      83ec0c         sub esp, 0xc
+│       │   0x00001350      8d832ce0ffff   lea eax, dword [ebx - 0x1fd4]
+│       │   0x00001356      50             push eax                    ; const char *s
+│       │   0x00001357      e804fdffff     call sym.imp.perror         ; void perror(const char *s)
+│       │   0x0000135c      83c410         add esp, 0x10
+│       │   0x0000135f      b801000000     mov eax, 1
+│      ┌──< 0x00001364      e9d4000000     jmp 0x143d
+│      ││   ; CODE XREF from main @ 0x134b
+│      │└─> 0x00001369      83ec08         sub esp, 8
+│      │    0x0000136c      6a03           push 3                      ; "F\x01\x01\x01"
+│      │    0x0000136e      ff75f4         push dword [socket]
+│      │    0x00001371      e88afdffff     call sym.imp.listen
+│      │    0x00001376      83c410         add esp, 0x10
+│      │    0x00001379      83ec0c         sub esp, 0xc
+│      │    0x0000137c      8d833ce0ffff   lea eax, dword [ebx - 0x1fc4]
+│      │    0x00001382      50             push eax                    ; const char *s
+│      │    0x00001383      e818fdffff     call sym.imp.puts           ; int puts(const char *s)
+│      │    0x00001388      83c410         add esp, 0x10
+│      │    0x0000138b      c745e8100000.  mov dword [var_18h], 0x10
+│      │    0x00001392      c745e8100000.  mov dword [var_18h], 0x10
+│      │┌─< 0x00001399      eb5f           jmp 0x13fa
+│      ││   ; CODE XREF from main @ 0x1417
+│     ┌───> 0x0000139b      83ec0c         sub esp, 0xc
+│     ╎││   0x0000139e      8d835be0ffff   lea eax, dword [ebx - 0x1fa5]
+│     ╎││   0x000013a4      50             push eax                    ; const char *s
+│     ╎││   0x000013a5      e8f6fcffff     call sym.imp.puts           ; int puts(const char *s)
+│     ╎││   0x000013aa      83c410         add esp, 0x10
+│     ╎││   0x000013ad      83ec0c         sub esp, 0xc
+│     ╎││   0x000013b0      6a01           push 1                      ; size_t size
+│     ╎││   0x000013b2      e8d9fcffff     call sym.imp.malloc         ;  void *malloc(size_t size)
+│     ╎││   0x000013b7      83c410         add esp, 0x10
+│     ╎││   0x000013ba      8945ec         mov dword [var_14h], eax
+│     ╎││   0x000013bd      8b45ec         mov eax, dword [var_14h]
+│     ╎││   0x000013c0      8b55f0         mov edx, dword [var_10h]
+│     ╎││   0x000013c3      8910           mov dword [eax], edx
+│     ╎││   0x000013c5      ff75ec         push dword [var_14h]
+│     ╎││   0x000013c8      8d83acd4ffff   lea eax, dword [ebx - 0x2b54]
+│     ╎││   0x000013ce      50             push eax
+│     ╎││   0x000013cf      6a00           push 0
+│     ╎││   0x000013d1      8d45c4         lea eax, dword [var_3ch]
+│     ╎││   0x000013d4      50             push eax
+│     ╎││   0x000013d5      e846fdffff     call sym.imp.pthread_create
+│     ╎││   0x000013da      83c410         add esp, 0x10
+│     ╎││   0x000013dd      85c0           test eax, eax
+│    ┌────< 0x000013df      7919           jns 0x13fa
+│    │╎││   0x000013e1      83ec0c         sub esp, 0xc
+│    │╎││   0x000013e4      8d836ee0ffff   lea eax, dword [ebx - 0x1f92]
+│    │╎││   0x000013ea      50             push eax                    ; const char *s
+│    │╎││   0x000013eb      e870fcffff     call sym.imp.perror         ; void perror(const char *s)
+│    │╎││   0x000013f0      83c410         add esp, 0x10
+│    │╎││   0x000013f3      b801000000     mov eax, 1
+│   ┌─────< 0x000013f8      eb43           jmp 0x143d
+│   ││╎││   ; CODE XREFS from main @ 0x1399, 0x13df
+│   │└──└─> 0x000013fa      83ec04         sub esp, 4
+│   │ ╎│    0x000013fd      8d45e8         lea eax, dword [var_18h]
+│   │ ╎│    0x00001400      50             push eax
+│   │ ╎│    0x00001401      8d45c8         lea eax, dword [var_38h]
+│   │ ╎│    0x00001404      50             push eax
+│   │ ╎│    0x00001405      ff75f4         push dword [socket]
+│   │ ╎│    0x00001408      e863fcffff     call sym.imp.accept
+│   │ ╎│    0x0000140d      83c410         add esp, 0x10
+│   │ ╎│    0x00001410      8945f0         mov dword [var_10h], eax
+│   │ ╎│    0x00001413      837df000       cmp dword [var_10h], 0
+│   │ └───< 0x00001417      7582           jne 0x139b
+│   │  │    0x00001419      837df000       cmp dword [var_10h], 0
+│   │  │┌─< 0x0000141d      7919           jns 0x1438
+│   │  ││   0x0000141f      83ec0c         sub esp, 0xc
+│   │  ││   0x00001422      8d837fe0ffff   lea eax, dword [ebx - 0x1f81]
+│   │  ││   0x00001428      50             push eax                    ; const char *s
+│   │  ││   0x00001429      e832fcffff     call sym.imp.perror         ; void perror(const char *s)
+│   │  ││   0x0000142e      83c410         add esp, 0x10
+│   │  ││   0x00001431      b801000000     mov eax, 1
+│   │ ┌───< 0x00001436      eb05           jmp 0x143d
+│   │ │││   ; CODE XREF from main @ 0x141d
+│   │ ││└─> 0x00001438      b800000000     mov eax, 0
+│   │ ││    ; CODE XREFS from main @ 0x1364, 0x13f8, 0x1436
+│   └─└└──> 0x0000143d      8d65f8         lea esp, dword [var_8h]
+│           0x00001440      59             pop ecx
+│           0x00001441      5b             pop ebx
+│           0x00001442      5d             pop ebp
+│           0x00001443      8d61fc         lea esp, dword [ecx - 4]
+└           0x00001446      c3             ret
