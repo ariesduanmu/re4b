@@ -1,0 +1,39 @@
+[0x00001447]> pdf
+            ; CALL XREF from sym.connection_handler @ 0x15cf
+┌ 101: sym.chat (char *src);
+│           ; var char *dest @ ebp-0x28
+│           ; var int32_t var_4h @ ebp-0x4
+│           ; arg char *src @ ebp+0x8
+│           0x00001447      55             push ebp
+│           0x00001448      89e5           mov ebp, esp
+│           0x0000144a      53             push ebx
+│           0x0000144b      83ec24         sub esp, 0x24
+│           0x0000144e      e86dfdffff     call sym.__x86.get_pc_thunk.bx
+│           0x00001453      81c3ad2b0000   add ebx, 0x2bad
+│           0x00001459      83ec0c         sub esp, 0xc
+│           0x0000145c      8d8390e0ffff   lea eax, dword [ebx - 0x1f70]
+│           0x00001462      50             push eax                    ; const char *s
+│           0x00001463      e838fcffff     call sym.imp.puts           ; int puts(const char *s)
+│           0x00001468      83c410         add esp, 0x10
+│           0x0000146b      83ec08         sub esp, 8
+│           0x0000146e      ff7508         push dword [src]
+│           0x00001471      8d83a2e0ffff   lea eax, dword [ebx - 0x1f5e]
+│           0x00001477      50             push eax                    ; const char *format
+│           0x00001478      e8b3fbffff     call sym.imp.printf         ; int printf(const char *format)
+│           0x0000147d      83c410         add esp, 0x10
+│           0x00001480      8b83f4ffffff   mov eax, dword [ebx - 0xc]
+│           0x00001486      8b00           mov eax, dword [eax]
+│           0x00001488      83ec0c         sub esp, 0xc
+│           0x0000148b      50             push eax                    ; FILE *stream
+│           0x0000148c      e8affbffff     call sym.imp.fflush         ; int fflush(FILE *stream)
+│           0x00001491      83c410         add esp, 0x10
+│           0x00001494      83ec08         sub esp, 8
+│           0x00001497      ff7508         push dword [src]            ; const char *src
+│           0x0000149a      8d45d8         lea eax, dword [dest]
+│           0x0000149d      50             push eax                    ; char *dest
+│           0x0000149e      e8ddfbffff     call sym.imp.strcpy         ; char *strcpy(char *dest, const char *src)
+│           0x000014a3      83c410         add esp, 0x10
+│           0x000014a6      90             nop
+│           0x000014a7      8b5dfc         mov ebx, dword [var_4h]
+│           0x000014aa      c9             leave
+└           0x000014ab      c3             ret
